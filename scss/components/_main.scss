@@ -124,9 +124,8 @@
     @include u.breakpoint(medium){
         grid-template-columns: 1fr 1fr;
         
-
-        .item__2{
-            border-top-right-radius: 1rem;
+        .grid__img--1{
+            border-top-left-radius: 1rem;
         }
 
         .item__3{
@@ -142,8 +141,15 @@
     @include u.breakpoint(large){
         grid-template-columns: repeat(3, 1fr);
 
+        .grid__img--1{
+            border-top-left-radius: 0;
+        }
         .item__1{
             grid-column: span 2;
+        }
+
+        .item__2{
+            border-top-right-radius: 1rem;
         }
         
         .item__3{

@@ -38,6 +38,10 @@
     @include u.breakpoint(medium){
         transition: none;
         height: auto;
+
+        &.toggle{
+            height: auto;
+        }
     }
 }
 
@@ -64,24 +68,21 @@
     }
 }
 
-.nav__item{
-    padding: 1rem 1rem;
-
-    @include u.breakpoint(medium){
-        padding-block: 0.5rem;
-    }
-}
-
 .nav__link{
+    display: block;
     text-decoration: none;
     color: var(--blue);
+    width: 100%;
+    padding-block: 1rem;
 
     @include u.breakpoint(medium){
-        padding: 0.5rem 0;
+        padding: 0.5rem;
+        display: inline;
 
         &.active{
             border-bottom: 2px solid var(--orange);
             font-weight: bold;
+            width: auto;
         }
     }
 }

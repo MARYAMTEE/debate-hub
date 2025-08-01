@@ -1,15 +1,15 @@
 const openMenu = document.querySelector(".nav__btn");
 const navBar = document.querySelector(".nav__menu");
-const navLink = document.querySelectorAll(".nav__link");
+const navItem = document.querySelectorAll(".nav__item");
 
 openMenu.addEventListener("click", () => {
     navBar.classList.toggle("toggle");
 });
 
-navLink.forEach(link => {
-    link.addEventListener("click", () => {
-        navLink.forEach(nav => nav.classList.remove("active"));
-        link.classList.add("active");
+navItem.forEach(item => {
+    item.addEventListener("click", () => {
+        navItem.forEach(nav => nav.classList.remove("active"));
+        item.classList.add("active");
         navBar.classList.remove("toggle");
     })
 });
