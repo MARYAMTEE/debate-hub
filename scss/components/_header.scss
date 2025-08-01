@@ -1,0 +1,112 @@
+@use '../utils/' as u;
+
+.parliamentary__header{
+    box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    background-color: white;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    z-index: 5;
+
+    @include u.breakpoint(medium){
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 1rem;
+    }
+
+    @include u.breakpoint(large){
+        padding: 0.5rem 5rem;
+    }
+}
+
+// NAVIGATION BAR
+.nav__menu{
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 0;
+    will-change: transform;
+    transition: height 0.3s ease-in-out;
+    overflow: hidden;
+
+    &.toggle{
+        height: 22rem;
+    }
+
+    @include u.breakpoint(medium){
+        transition: none;
+        height: auto;
+    }
+}
+
+.nav__list{
+    list-style-type: none;
+    display: block;
+
+    @include u.breakpoint(medium){
+        display: flex; 
+        justify-content: flex-end; 
+        gap: 0.5rem; 
+    }
+
+    @include u.breakpoint(large){
+        gap: 2rem;
+    }
+}
+
+.nav__item:not(:last-child){
+    border-bottom: 0.0625rem solid #b4b3b3;
+
+    @include u.breakpoint(medium){
+        border-bottom: none;
+    }
+}
+
+.nav__item{
+    padding: 1rem 1rem;
+
+    @include u.breakpoint(medium){
+        padding-block: 0.5rem;
+    }
+}
+
+.nav__link{
+    text-decoration: none;
+    color: var(--blue);
+
+    @include u.breakpoint(medium){
+        padding: 0.5rem 0;
+
+        &.active{
+            border-bottom: 2px solid var(--orange);
+            font-weight: bold;
+        }
+    }
+}
+
+.parliamentary__logo{
+    justify-content: space-between;
+}
+
+.logo__img{
+    width: 3rem;
+
+    @include u.breakpoint(medium){
+        width: 5rem;
+    }
+}
+
+.nav__btn{
+    display: block;
+
+    .open__menu{
+        font-size: 1.5rem;
+        color: var(--blue);
+    }
+
+    @include u.breakpoint(medium){
+        display: none;
+    }
+}

@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --blue: hsla(222, 53%, 43%, 1);
+    --light-blue: hsla(222, 62%, 61%, 1);
+    --white: hsla(0, 0%, 100%, 1);
+    --orange: hsla(8, 72%, 58%, 1);
+    --deep-orange: hsla(8, 72%, 55%, 1);
+}
+
+// Raleway
+body{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    position: relative;
+    color: black;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: "Raleway", sans-serif;;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+.grid{
+    display: grid;
+    place-items: center;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+@media (prefers-reduced-motion: reduce){
+    .nav__menu,
+    .contact__btn{
+        transition: none;
+    }
+}
