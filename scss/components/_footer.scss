@@ -1,0 +1,73 @@
+@use '../utils/' as u;
+.parliamentary__footer{
+    background-color: var(--blue);
+    padding: 3rem 1rem;
+
+    @include u.breakpoint(medium){
+        padding: 4rem 2rem;
+    }
+}
+
+.footer__socials{
+    gap: 1rem;
+
+    .footer__icon{
+        background-color: var(--white);
+        color: var(--blue);
+        font-size: 1.5rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+
+.footer__container{
+    flex-direction: column-reverse;
+    gap: 2rem;
+
+    @include u.breakpoint(medium){
+        flex-direction: column;
+    }
+}
+
+// FOOTER LINKS
+.footer__nav{
+    list-style-type: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+
+    @include u.breakpoint(medium){
+        flex-direction: row;
+        gap: 2.5rem;
+    }
+
+    .footer__nav-link{
+        color: var(--white);
+        text-decoration: none;;
+    }
+}
+
+.footer__paragraph{
+    text-align: center;
+    color: var(--white);
+    font-size: 0.875rem;
+    font-weight: 300;
+}
+
+.footer__divider{
+    background-color: var(--white);
+    height: 0.0625rem;
+    width: 100%;
+    margin: 1.5rem 0;
+    border: none;
+
+    @include u.breakpoint(medium){
+        width: 80%;
+        margin: 2rem auto;
+    }
+}

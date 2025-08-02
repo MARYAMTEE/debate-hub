@@ -339,7 +339,7 @@
 
 .container__course{
     margin-block-start: 2rem;
-    gap: 0.5rem;
+    gap: 1rem;
 
     @include u.breakpoint(medium){
         gap: 1.5rem;
@@ -414,5 +414,27 @@
     .course__toggle.toggle{
         max-height: 250px;
     // padding: 1rem;
+    }
+}
+
+// Career section
+.course__career{
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    gap: 2rem;
+    background-color: var(--career-bg);
+
+    @include u.breakpoint(medium){
+        flex-direction: row;
+    }
+
+    .career__image{
+        flex: 1;
+    }
+
+    .career__text{
+        flex: 1;
+        padding-block: 1rem;
     }
 }
