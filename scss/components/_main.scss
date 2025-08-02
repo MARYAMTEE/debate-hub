@@ -317,12 +317,14 @@
     }
 }
 
-.course__toogle{
+.course__toggle{
     max-height: 0;
     overflow: hidden;
-
+    transition: max-height 0.3s ease-in-out;
+    // padding: 0 1rem;
 }
 
 .course__toggle.toggle{
-    max-height:200px;
+    max-height: 250px;
+    // padding: 1rem;
 }

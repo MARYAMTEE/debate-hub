@@ -14,15 +14,16 @@ navItem.forEach(item => {
     })
 });
 
+// Accordion toggle for course sections
 const toggleBtn = document.querySelectorAll(".course__btn");
-
 
 toggleBtn.forEach(btn =>{
     btn.addEventListener("click", () => {
-        const courseToggle = btn.closest(".course__container").querySelector(".course__toggle");
-        courseToggle.classList.toggle("toggle");
-    })
-})
+        const container = btn.closest(".course__container");
+        const toggle = container.querySelector(".course__toggle");
+        toggle.classList.toggle("toggle");
+    });
+});
 
 
 //  nav.toggle{
