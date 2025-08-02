@@ -217,12 +217,6 @@
 // About Us title
 .about__title{
     margin-block: 2rem;
-
-    .about__text{
-        color: var(--blue);
-        text-align: center;
-        // font-size: 2.5rem;
-    }
 }
 
 // Core values
@@ -308,6 +302,13 @@
     }
 }
 
+.about__text,
+    .course__text{
+        color: var(--blue);
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
 .core__header{
     text-align: center;
     margin-block-end: 1rem;
@@ -333,9 +334,9 @@
     }
 }
 
-.course__text{
-    color: var(--blue);
-}
+// .course__text{
+//     color: var(--blue);
+// }
 
 .container__course{
     margin-block-start: 2rem;
