@@ -9,7 +9,7 @@
     width: 100%;
     height: calc(100vh - 4.5rem);
     position: relative;
-    z-index: 0;
+    z-index: 10;
 
     &::after{
         content: '';
@@ -327,4 +327,8 @@
 .course__toggle.toggle{
     max-height: 250px;
     // padding: 1rem;
+}
+
+.course__arrow.rotated{
+    transform: rotate(180deg);
 }

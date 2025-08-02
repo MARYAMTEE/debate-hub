@@ -12,7 +12,10 @@
     --deep-orange: hsla(8, 72%, 55%, 1);
 }
 
-// Raleway
+html {
+  scroll-behavior: smooth;
+}
+
 body{
     font-family: "Poppins", sans-serif;
     font-weight: 500;

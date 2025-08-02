@@ -7,7 +7,7 @@
     background-color: white;
     padding: 0.5rem 1rem;
     width: 100%;
-    z-index: 5;
+    z-index: 15;
 
     @include u.breakpoint(medium){
         display: flex;
@@ -27,9 +27,10 @@
     top: 0;
     width: 100%;
     height: 0;
-    will-change: transform;
-    transition: height 0.3s ease-in-out;
+    // will-change: transform;
+    transition: height 0.3s ease;
     overflow: hidden;
+    z-index: 1000;
 
     &.toggle{
         height: 22rem;
