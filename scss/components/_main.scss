@@ -1,7 +1,7 @@
 @use '../utils/' as u;
 
 section{
-    scroll-margin-block-start: 6.3rem;
+    scroll-margin-block-start: 4.3rem;
 
     @include u.breakpoint(medium){
         scroll-margin-block-start: 7.5rem;
