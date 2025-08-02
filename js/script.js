@@ -14,26 +14,16 @@ navItem.forEach(item => {
     })
 });
 
-const curricumlumSyllabus = document.querySelectorAll(".accordion");
+const toggleBtn = document.querySelectorAll(".course__btn");
 
-curricumlumSyllabus.forEach((item, index) => {
-    const button = item.querySelector(".curriculum-btn");
-    const downArrow = item.querySelector(".curriculum-arrow");
-    const text = item.querySelector(".text");
 
-    button.addEventListener("click", () => {
-        const isOpen = text.classList.toggle("toggle");
-        
-        downArrow.classList.toggle("fa-down-long");
-        downArrow.classList.toggle("fa-up-long");
-
-        if(isOpen) {
-            button.classList.add("active");
-        }else {
-            button.classList.remove("active");
-        }
+toggleBtn.forEach(btn =>{
+    btn.addEventListener("click", () => {
+        const courseToggle = btn.closest(".course__container").querySelector(".course__toggle");
+        courseToggle.classList.toggle("toggle");
     })
-});
+})
+
 
 //  nav.toggle{
     

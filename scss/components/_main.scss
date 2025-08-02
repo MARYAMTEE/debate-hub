@@ -276,8 +276,8 @@
 
         .core__icon-container{
             background-color: var(--deep-orange);
-            width: 2.5rem;
-            height: 2.5rem;
+            width: 2rem;
+            height: 2rem;
             border-radius: 50%;
             display: grid;
             place-items: center;
@@ -294,6 +294,11 @@
 
             .core__icon{
                 color: var(--white);
+                font-size: 1rem;
+
+                @include u.breakpoint(large){
+                    font-size: 1.2rem;
+                }
             }
         }
 
@@ -310,4 +315,14 @@
     @include u.breakpoint(medium){
         margin-block-end: 1.5rem;
     }
+}
+
+.course__toogle{
+    max-height: 0;
+    overflow: hidden;
+
+}
+
+.course__toggle.toggle{
+    max-height:200px;
 }
