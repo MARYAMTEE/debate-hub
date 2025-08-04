@@ -80,12 +80,13 @@ section{
     background-color: var(--orange);
     padding: 0.6rem 2.5rem;
     font-size: 1.125rem;
+    will-change: transform;
     transition: transform 0.8s ease-in-out;
     color: var(--white);
     margin-block-start: 0.5rem;
 
     &:hover{
-        transform: scale(1.1);
+        transform: translateY(-0.5rem);
     }
 }
 
@@ -103,6 +104,8 @@ section{
     .banner__arrow{
         color: var(--white);
         font-size: 2.5rem;
+        z-index: 1000;
+        animation: grow-and-shrink_ 4s infinite ease-in-out alternate;
 
         @include u.breakpoint(medium){
             font-size: 2rem;
@@ -110,6 +113,17 @@ section{
     }
 }
 
+@keyframes grow-and-shrink_{
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 // Container main
 .parliamentary__about_container{
     padding-inline: 2rem;
@@ -196,6 +210,10 @@ section{
         font-weight: 400;
         padding-block: 1rem;
         line-height: 1.8;
+
+        @include u.breakpoint(large){
+            max-width: 20rem;
+        }
     }
 }
 
@@ -208,13 +226,13 @@ section{
 
     .grid__img{
         width: 100%;
-        height: 25rem;
+        height: 24.5rem;
         object-fit: cover;
         object-position: center;
         transition: height 0.3s ease;
 
         @include u.breakpoint(large){
-            height: 26rem;;
+            height: 26rem;
         }
     }
     
@@ -432,7 +450,7 @@ section{
     }
 
     .course__toggle.toggle{
-        max-height: 250px;
+        max-height: 15.625rem;
     // padding: 1rem;
     }
 }
