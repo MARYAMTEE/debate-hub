@@ -55,7 +55,8 @@ img{
 
 @media (prefers-reduced-motion: reduce){
     .nav__menu,
-    .contact__btn{
+    .contact__btn,
+    .footer__icon{
         transition: none;
     }
 }

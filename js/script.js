@@ -28,15 +28,18 @@ toggleBtn.forEach(btn =>{
     });
 });
 
+// Read more link
+document.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll(".grid__paragraph-link");
 
-//  nav.toggle{
-    
-// }
+    links.forEach(link => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const container = link.closest(".grid__item");
+            const moreText = container.querySelector(".grid__paragraph--more");
 
-// .text.toggle{
-//     display: block;
-//  }
-
-//  .curriculum-btn.active{
-//     background-color: orange;
-//  }
+            moreText.classList.toggle("hidden");
+            link.textContent = moreText.classList.contains("hidden") ? "Read more" : "Read less";
+        });
+    });
+});
