@@ -56,7 +56,9 @@ img{
 @media (prefers-reduced-motion: reduce){
     .nav__menu,
     .contact__btn,
-    .footer__icon{
+    .footer__icon,
+    .grid__img,
+    .course__toggle{
         transition: none;
         animation: none;
     }

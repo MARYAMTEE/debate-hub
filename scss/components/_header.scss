@@ -78,7 +78,6 @@
     @include u.breakpoint(medium){
         padding: 0.5rem;
         display: inline-block;
-        transition: border-bottom 0.5s ease;
 
         &.active{
             border-bottom: 0.0625rem solid var(--orange);
