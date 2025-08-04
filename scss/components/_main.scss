@@ -114,8 +114,8 @@ section{
 .parliamentary__about_container{
     padding-inline: 2rem;
 
-    @include u.breakpoint(medium){
-        padding-inline: 4rem;
+    @include u.breakpoint(large){
+        padding-inline: 3rem;
     }
     
 }
@@ -184,13 +184,7 @@ section{
     position: relative;
 
     @include u.breakpoint(medium){
-        padding: 3rem 1.5rem;
-        text-align: center;
-    }
-
-    @include u.breakpoint(large){
-        text-align: left;
-        padding: 2rem 1rem;
+        padding: 3rem 1rem;
     }
 
     .grid__title{
@@ -202,10 +196,6 @@ section{
         font-weight: 400;
         padding-block: 1rem;
         line-height: 1.8;
-
-        @include u.breakpoint(large){
-            max-width: 18rem;
-        }
     }
 }
 
@@ -215,11 +205,27 @@ section{
             grid-column: 4;
         }
     }
+
     .grid__img{
         width: 100%;
-        // height: 25rem;
+        height: 25rem;
         object-fit: cover;
         object-position: center;
+        transition: height 0.3s ease;
+
+        @include u.breakpoint(large){
+            height: 26rem;;
+        }
+    }
+    
+    .grid__img.expanded__height{
+        @include u.breakpoint(medium){
+            height: 35rem;
+        }
+
+        @include u.breakpoint(large){
+            height: 40rem;
+        }
     }
 }
 

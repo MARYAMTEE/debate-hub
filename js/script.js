@@ -30,16 +30,25 @@ toggleBtn.forEach(btn =>{
 
 // Read more link
 document.addEventListener("DOMContentLoaded", () => {
-    const links = document.querySelectorAll(".grid__paragraph-link");
+  const links = document.querySelectorAll(".grid__paragraph-link");
+  const allImages = document.querySelectorAll(".grid__img");
 
-    links.forEach(link => {
-        link.addEventListener("click", (e) => {
-            e.preventDefault();
-            const container = link.closest(".grid__item");
-            const moreText = container.querySelector(".grid__paragraph--more");
+  links.forEach(link => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
 
-            moreText.classList.toggle("hidden");
-            link.textContent = moreText.classList.contains("hidden") ? "Read more" : "Read less";
-        });
+      const textBlock = link.closest(".grid__item");
+      const moreText = textBlock.querySelector(".grid__paragraph--more");
+
+      // Toggle text visibility
+      moreText.classList.toggle("hidden");
+      const expanded = !moreText.classList.contains("hidden");
+      link.textContent = expanded ? "Read less" : "Read more";
+
+      // Expand or shrink ALL images
+      allImages.forEach(img => {
+        img.classList.toggle("expanded__height", expanded);
+      });
     });
+  });
 });
