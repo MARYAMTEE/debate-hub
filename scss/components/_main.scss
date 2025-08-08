@@ -44,6 +44,8 @@ section{
     width: 100%;
     text-align: center;
     padding-inline: 1rem;
+    max-width: 42rem;
+    margin: 0 auto;
 
     .banner__heading{
         font-family: "Raleway", sans-serif;
@@ -56,7 +58,7 @@ section{
     }
 
     @include u.breakpoint(medium){
-        max-width: 580px;
+        max-width: 36.25rem;
         padding: 0;
         text-align: left;
         top: 60%;
@@ -412,7 +414,9 @@ section{
         gap: 1rem;
         background-color: var(--orange);
         padding-block: 0.5rem;
+        padding-inline: 1rem;
         color: var(--white);
+        justify-content: flex-start;
 
         @include u.breakpoint(medium){
             padding-inline: 0.5rem;
@@ -427,8 +431,8 @@ section{
     .course__btn{
         border: 1px solid var(--white);
         border-radius: 50%;
-        width: 1rem;
-        height: 1rem;
+        width: 1.3rem;
+        height: 1.3rem;
 
         @include u.breakpoint(large){
             width: 1.7rem;
@@ -437,15 +441,15 @@ section{
 
         .course__arrow{
             color: var(--white);
-            font-size: 0.5rem;
+            font-size: 0.6rem;
 
             @include u.breakpoint(large){
                 font-size: 0.8rem;
             }
-    
-            .course__arrow.rotated{
-                transform: rotate(180deg);
-            }
+        }
+
+        .course__arrow.rotated{
+            transform: rotate(180deg);
         }
     }
 
