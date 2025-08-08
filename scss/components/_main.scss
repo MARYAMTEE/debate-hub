@@ -200,7 +200,7 @@ section{
     position: relative;
 
     @include u.breakpoint(medium){
-        padding: 3rem 1rem;
+        padding: 3rem 2rem;
     }
 
     .grid__title{
@@ -213,9 +213,9 @@ section{
         padding-block: 1rem;
         line-height: 1.8;
 
-        @include u.breakpoint(large){
-            max-width: 20rem;
-        }
+        // @include u.breakpoint(large){
+        //     max-width: 20rem;
+        // }
     }
 }
 
@@ -240,11 +240,11 @@ section{
     
     .grid__img.expanded__height{
         @include u.breakpoint(medium){
-            height: 35rem;
+            height: 28rem;
         }
 
         @include u.breakpoint(large){
-            height: 40rem;
+            height: 31.5rem;
         }
     }
 }
