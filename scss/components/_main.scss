@@ -1,7 +1,7 @@
 @use '../utils/' as u;
 
 section{
-    scroll-margin-block-start: 4rem;
+    scroll-margin-block-start: 5rem;
 
     @include u.breakpoint(medium){
         scroll-margin-block-start: 8rem;
@@ -220,6 +220,9 @@ section{
 }
 
 .grid__image{
+    position: relative;
+    overflow: hidden;
+    
     @include u.breakpoint(medium){
         .item__5{
             grid-column: 4;
@@ -228,13 +231,16 @@ section{
 
     .grid__img{
         width: 100%;
-        height: 24.5rem;
+        height: 24rem;
         object-fit: cover;
         object-position: center;
         transition: height 0.3s ease;
 
-        @include u.breakpoint(large){
-            height: 26rem;
+        @include u.breakpoint(medium){
+            position: absolute;
+            inset: 0;
+            // height: 100%;
+            // height: 26rem;
         }
     }
     
@@ -431,8 +437,8 @@ section{
     .course__btn{
         border: 1px solid var(--white);
         border-radius: 50%;
-        width: 1.3rem;
-        height: 1.3rem;
+        width: 1.7rem;
+        height: 1.7rem;
 
         @include u.breakpoint(large){
             width: 1.7rem;
@@ -441,7 +447,7 @@ section{
 
         .course__arrow{
             color: var(--white);
-            font-size: 0.6rem;
+            font-size: 1rem;
 
             @include u.breakpoint(large){
                 font-size: 0.8rem;

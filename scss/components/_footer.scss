@@ -1,4 +1,12 @@
 @use '../utils/' as u;
+
+:root{
+    --facebook: rgb(24, 119, 242);
+    --twitter: rgb(29, 161, 242);
+    --instagram: linear-gradient(45deg,#F58529, #FEDA77, #DD2A7B, #8134AF, #515BD4);
+    --pin-interest: rgb(230, 0, 35);
+}
+
 .parliamentary__footer{
     background-color: var(--blue);
     padding: 3rem 1rem;
@@ -76,4 +84,19 @@
         width: 80%;
         margin: 2rem auto;
     }
+}
+
+.facebook{
+
+    &:hover{
+        color: var(--facebook);
+    }
+}
+
+.instagram{
+    background-color: var(--instagram);
+}
+
+.pin-interes{
+    background-color: var(--pin-interest);
 }
