@@ -52,3 +52,28 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// Testimonials slide
+const slides = document.querySelector(".testimonials__slides");
+const slide = document.querySelectorAll(".testimonials__slide");
+
+const slideNext = document.querySelector(".testimonials__btn--next");
+const slidePrev = document.querySelector(".testimonials__btn--prev");
+
+let slideIndex = 0;
+
+function showSlide(i){
+  slides.style.transform = `translateX(-${i * 300}px)`;
+}
+
+slideNext.addEventListener("click", () => {
+  slideIndex = (slideIndex + 1) % slide.length;
+  showSlide(slideIndex)
+});
+
+slidePrev.addEventListener("click", () => {
+  slideIndex = (slideIndex - 1 + slide.length) % slide.length;
+  showSlide(slideIndex)
+});
+
+

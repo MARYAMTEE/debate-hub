@@ -491,3 +491,26 @@ section{
 .hidden{
     display: none;
 }
+
+// Testimonials section
+.testimonials__carousel{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: auto;
+}
+
+.testimonials__slides{
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.testimonials__slide{
+    flex: 0 0 100%;
+    padding: 1rem;
+    background-color: grey;
+}
+
+.testimonials__img{
+    width: 8rem;
+}
