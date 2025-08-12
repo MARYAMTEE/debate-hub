@@ -272,7 +272,7 @@ section{
 .parliamentary__core-value{
     flex-direction: column;
     gap: 2rem;
-    margin-block: 2rem;
+    margin-block: 3rem;
 
     @include u.breakpoint(medium){
         flex-direction: row;
@@ -583,6 +583,7 @@ section{
 
     .slide__title{
         margin-block-start: 1rem;
+        line-height: 1.6;
     }
 }
 
