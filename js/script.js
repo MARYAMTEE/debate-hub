@@ -29,7 +29,6 @@ toggleBtn.forEach(btn =>{
 });
 
 // Read more link
-document.addEventListener("DOMContentLoaded", () => {
   const links = document.querySelectorAll(".grid__paragraph-link");
   const allImages = document.querySelectorAll(".grid__img");
 
@@ -51,7 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
-});
 
 // Testimonials slide
 const slides = document.querySelector(".testimonials__slides");
@@ -59,11 +57,32 @@ const slide = document.querySelectorAll(".testimonials__slide");
 
 const slideNext = document.querySelector(".testimonials__btn--next");
 const slidePrev = document.querySelector(".testimonials__btn--prev");
+const indicatorsContainer = document.querySelector(".indicators");
 
 let slideIndex = 0;
 
+slide.forEach((_, i) => {
+  const dot = document.createElement("button");
+  if(i === 0) dot.classList.add("active");
+  dot.addEventListener("click", () => {
+    slideIndex = i;
+    showSlide(slideIndex);
+  });
+  indicatorsContainer.appendChild(dot);
+});
+
+const indicators = document.querySelectorAll(".indicators button");
+
+function updateIndicators() {
+  indicators.forEach((dot, i) => {
+    dot.classList.toggle("active", i === slideIndex);
+  });
+}
+
 function showSlide(i){
-  slides.style.transform = `translateX(-${i * 300}px)`;
+  const slideWidth = slide[0].clientWidth;
+  slides.style.transform = `translateX(-${i * slideWidth}px)`;
+  updateIndicators();
 }
 
 slideNext.addEventListener("click", () => {
