@@ -1,7 +1,7 @@
 @use '../utils/' as u;
 
 section{
-    scroll-margin-block-start: 3rem;
+    scroll-margin-block-start: 5rem;
 
     @include u.breakpoint(medium){
         scroll-margin-block-start: 8rem;
@@ -220,45 +220,39 @@ section{
         font-weight: 400;
         padding-block: 1rem;
         line-height: 1.8;
-
-        // @include u.breakpoint(large){
-        //     max-width: 20rem;
-        // }
     }
 }
 
 .grid__image{
     position: relative;
     overflow: hidden;
+    padding-bottom: 80%;
     
     @include u.breakpoint(medium){
-        .item__5{
-            grid-column: 4;
-        }
+        padding-bottom: 50%;
+    }
+
+    @include u.breakpoint(large){
+        padding-bottom: 30%;
     }
 
     .grid__img{
+        position: absolute;
+        inset: 0;
         width: 100%;
-        height: 24rem;
+        height: 100%;
         object-fit: cover;
         object-position: center;
         transition: height 0.3s ease;
-
-        @include u.breakpoint(medium){
-            position: absolute;
-            inset: 0;
-            // height: 100%;
-            // height: 26rem;
-        }
     }
     
     .grid__img.expanded__height{
         @include u.breakpoint(medium){
-            height: 28rem;
+            height: 100%;
         }
 
         @include u.breakpoint(large){
-            height: 31.5rem;
+            height: 100%;
         }
     }
 }
@@ -501,6 +495,10 @@ section{
     display: none;
 }
 
+.grid__paragraph-link{
+    color: var(---white);
+}
+
 // Testimonials section
 .parliamentary__testimonials{
     margin-block: 3rem;
@@ -558,19 +556,22 @@ section{
     }
 }
 
-.testimonial__slide-img{
+.testimonials__img-container{
+    padding-bottom: 50%;
     position: relative;
 }
 
 .testimonials__img{
+    position: absolute;
     width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: center;
-    height: 10rem;
 
     @include u.breakpoint("medium"){
         width: 10rem;
         height: 100%;
+        display: block;
     }
 }
 
