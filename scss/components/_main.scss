@@ -499,11 +499,69 @@ section{
     color: var(---white);
 }
 
+.testimonials__subtitle {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--light-blue);
+    text-align: center;
+    padding-block: 1rem;
+}
+
+.testimonials__carousel{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: auto;
+
+    .testimonials__slides{
+        display: flex;
+        transition: transform 0.5s ease;
+
+        @include u.breakpoint(medium){
+            gap: 2rem;
+        }
+    }
+
+    .testimonials__slider{
+        flex: 0 0 100%;
+
+        @include u.breakpoint(medium){
+            flex: 0 0 50%;
+        }
+    }
+}
+
+.testimonials__slider{
+    display: block;
+
+    @include u.breakpoint(medium){
+        display: flex;
+        gap: 1rem;
+    }
+}
+
+.testimonials__image{
+    position: relative;
+    padding-block-end: 60%;
+}
+
+.testimonials__imgs{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    @include u.breakpoint(medium){
+        position: static;
+    }
+}
+
 // Navigation buttons
 .testimonials__btn{
     position: absolute;
-    top: 96%;
-    transform: translateY(-50%);
+    // top: 96%;
+    // transform: translateY(-50%);
     background: none;
     color: black;
     padding: 0.8rem 1rem;
@@ -521,18 +579,10 @@ section{
 
 .testimonials__btn--prev{
     left: 1rem;
-
-    @include u.breakpoint(medium){
-        left: 3rem;
-    }
 }
 
 .testimonials__btn--next{
     right: 1rem;
-
-    @include u.breakpoint(medium){
-        right: 3rem;
-    }
 }
 
 // carousel indicators
@@ -542,9 +592,9 @@ section{
     gap: 1rem;
     margin-block: 1.2rem;
 
-    @include u.breakpoint(medium){
-        margin-block: 1.5rem;
-    }
+    // @include u.breakpoint(medium){
+    //     margin-block: 1.5rem;
+    // }
 }
 
 .indicators button {

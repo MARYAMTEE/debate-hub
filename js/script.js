@@ -53,7 +53,7 @@ toggleBtn.forEach(btn =>{
 
 // Testimonials slide
 const slides = document.querySelector(".testimonials__slides");
-const slide = document.querySelectorAll(".testimonials__slide");
+const slide = document.querySelectorAll(".testimonials__slider");
 
 const slideNext = document.querySelector(".testimonials__btn--next");
 const slidePrev = document.querySelector(".testimonials__btn--prev");
