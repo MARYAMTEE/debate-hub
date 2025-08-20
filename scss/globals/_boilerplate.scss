@@ -24,6 +24,7 @@ body{
     font-weight: 500;
     position: relative;
     color: black;
+    position: relative;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -63,4 +64,13 @@ img{
         transition: none;
         animation: none;
     }
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
 }
