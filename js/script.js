@@ -64,11 +64,6 @@ toggleBtn.forEach(btn =>{
       moreText.classList.toggle("hidden");
       const expanded = !moreText.classList.contains("hidden");
       link.textContent = expanded ? "Read less" : "Read more";
-
-      // Expand or shrink ALL images
-      allImages.forEach(img => {
-        img.classList.toggle("expanded__height", expanded);
-      });
     });
   });
 
