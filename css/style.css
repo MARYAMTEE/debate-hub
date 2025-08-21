@@ -205,9 +205,6 @@ img {
   display: inline;
 }
 
-section {
-  scroll-margin-block-start: 3.5rem;
-}
 @media (min-width: 56.25rem) {
   section {
     scroll-margin-block-start: 8rem;
