@@ -206,7 +206,7 @@ img {
 }
 
 section {
-  scroll-margin-block-start: 1rem;
+  scroll-margin-block-start: 3.5rem;
 }
 @media (min-width: 56.25rem) {
   section {
@@ -397,7 +397,7 @@ section {
 .grid__item {
   background-color: var(--blue);
   color: var(--white);
-  padding: 2rem;
+  padding: 2rem 1.5rem;
   position: relative;
 }
 @media (min-width: 56.25rem) {

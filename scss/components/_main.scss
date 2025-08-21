@@ -1,7 +1,7 @@
 @use '../utils/' as u;
 
 section{
-    scroll-margin-block-start: 1rem;
+    scroll-margin-block-start: 3.5rem;
 
     @include u.breakpoint(medium){
         scroll-margin-block-start: 8rem;
@@ -205,7 +205,7 @@ section{
 .grid__item{
     background-color: var(--blue);
     color: var(--white);
-    padding: 2rem;
+    padding: 2rem 1.5rem;
     position: relative;
 
     @include u.breakpoint(medium){
