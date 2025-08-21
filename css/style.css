@@ -206,7 +206,7 @@ img {
 }
 
 section {
-  scroll-margin-block-start: 2.5rem;
+  scroll-margin-block-start: 1rem;
 }
 @media (min-width: 56.25rem) {
   section {

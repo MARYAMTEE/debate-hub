@@ -1,7 +1,7 @@
 @use '../utils/' as u;
 
 section{
-    scroll-margin-block-start: 2.5rem;
+    scroll-margin-block-start: 1rem;
 
     @include u.breakpoint(medium){
         scroll-margin-block-start: 8rem;
@@ -33,27 +33,6 @@ section{
         aspect-ratio: 21 / 9;
     }
 }
-
-// .banner__img{
-//     position: relative;
-//     background-color: red;
-//     padding-bottom: 100%;
-//     overflow: ;
-// }
-
-// .banner__image{
-//     position: absolute;
-//     top: 0;
-//     width: 100%;
-//     object-fit: cover;
-//     object-position: center;
-//     height: calc(100vh - 6.3rem);
-
-//     @include u.breakpoint(medium){
-//         height: 100vh;
-//     }
-    
-// }
 
 // Banner Text
 .banner__text{
