@@ -499,12 +499,30 @@ section{
     color: var(---white);
 }
 
-.testimonials__subtitle {
-    font-size: 1rem;
-    font-weight: 500;
-    color: var(--light-blue);
-    text-align: center;
-    padding-block: 1rem;
+// Testimonials section
+.parliamentary__testimonials{
+    margin-block: 3rem;
+
+    @include u.breakpoint("medium"){
+        margin-block: 5rem;
+    }
+
+    .testimonials__title{
+        line-height: 1.6;
+        margin-block-end: 2rem;
+
+        .testimonials__subtitle{
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--light-blue);
+            text-align: center;
+
+            @include u.breakpoint("medium"){
+                font-size: 1.5rem;
+                font-weight: 600;
+            }
+        }
+    }
 }
 
 .testimonials__carousel{
@@ -524,25 +542,26 @@ section{
 
     .testimonials__slider{
         flex: 0 0 100%;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.13);
 
         @include u.breakpoint(medium){
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
             flex: 0 0 50%;
         }
-    }
-}
-
-.testimonials__slider{
-    display: block;
-
-    @include u.breakpoint(medium){
-        display: flex;
-        gap: 1rem;
     }
 }
 
 .testimonials__image{
     position: relative;
     padding-block-end: 60%;
+
+    @include u.breakpoint(medium){
+        position: static;
+        padding-block-end: 0%;
+    }
 }
 
 .testimonials__imgs{
@@ -554,18 +573,43 @@ section{
 
     @include u.breakpoint(medium){
         position: static;
+        width: 35rem;
+        height: 17rem;
+    }
+}
+
+.testimonial__texts{
+    padding: 2rem 1rem;
+
+    @include u.breakpoint(medium){
+        padding: 1rem;
+    }
+
+    .testimonials__date{
+        color: var(--testimonial-color);
+    }
+
+    .testimonials__slide-title{
+        line-height: 1.4;
+        margin-block: 0.5rem;
+    }
+
+    .testimonials__paragraph{
+        color: var(--testimonial-color);
+        font-size: 0.875rem;
     }
 }
 
 // Navigation buttons
 .testimonials__btn{
     position: absolute;
-    // top: 96%;
-    // transform: translateY(-50%);
     background: none;
-    color: black;
-    padding: 0.8rem 1rem;
+    margin: 0.8rem 1rem;
     cursor: pointer;
+
+    @include u.breakpoint(medium){
+        margin-block: 2rem;
+    }
 
     .slide__arrow{
         font-size: 2rem;
@@ -592,9 +636,9 @@ section{
     gap: 1rem;
     margin-block: 1.2rem;
 
-    // @include u.breakpoint(medium){
-    //     margin-block: 1.5rem;
-    // }
+    @include u.breakpoint(medium){
+        margin-block: 2.7rem;
+    }
 }
 
 .indicators button {

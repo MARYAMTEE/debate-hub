@@ -101,8 +101,10 @@
 
 .nav__btn{
     display: block;
+    cursor: pointer;
 
-    .open__menu{
+    .open__menu,
+    .close__menu{
         font-size: 2rem;
         color: var(--blue);
     }
@@ -110,4 +112,17 @@
     @include u.breakpoint(medium){
         display: none;
     }
+
+    .close__menu{
+        display: none;
+    }
+}
+
+// Toggle button state
+.nav__btn.active .open__menu{
+    display: none;
+}
+
+.nav__btn.nav__btn.active .close__menu{
+    display: inline;
 }
