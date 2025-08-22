@@ -61,7 +61,10 @@ img {
   .contact__btn,
   .footer__icon,
   .grid__img,
-  .course__toggle {
+  .course__toggle,
+  .banner__text,
+  .grid__image,
+  .testimonials__slides {
     transition: none;
     animation: none;
   }
@@ -232,8 +235,12 @@ img {
 @media (min-width: 56.25rem) {
   .parliamentary__banner {
     background-image: url(../images/background__desktop.jpg);
+    height: calc(100vh - 4rem);
+  }
+}
+@media (min-width: 75rem) {
+  .parliamentary__banner {
     height: 100vh;
-    aspect-ratio: 21/9;
   }
 }
 
@@ -249,6 +256,7 @@ img {
   padding-inline: 1rem;
   max-width: 42rem;
   margin: 0 auto;
+  animation: fade-text 2s;
 }
 .banner__text .banner__heading {
   font-family: "Raleway", sans-serif;
@@ -266,6 +274,7 @@ img {
     top: 60%;
     left: 40%;
     transform: translate(-40%, -60%);
+    animation: fade-caption 2s;
   }
   .banner__text .banner__heading {
     font-size: 3rem;
@@ -279,6 +288,26 @@ img {
   }
 }
 
+@keyframes fade-text {
+  0% {
+    opacity: 0;
+    top: 0;
+  }
+  100% {
+    opacity: 1;
+    top: 50%;
+  }
+}
+@keyframes fade-caption {
+  0% {
+    opacity: 0;
+    top: 0;
+  }
+  100% {
+    opacity: 1;
+    top: 60%;
+  }
+}
 .contact__btn {
   background-color: var(--orange);
   padding: 0.6rem 2.5rem;
@@ -650,14 +679,18 @@ img {
 
 .course__career {
   flex-direction: column;
-  justify-content: start;
-  align-items: flex-start;
   gap: 2rem;
   background-color: var(--career-bg);
 }
 @media (min-width: 56.25rem) {
   .course__career {
     flex-direction: row;
+  }
+}
+@media (min-width: 75rem) {
+  .course__career {
+    justify-content: start;
+    align-items: flex-start;
   }
 }
 .course__career .career__image {
