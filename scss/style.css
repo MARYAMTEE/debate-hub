@@ -209,6 +209,9 @@ img {
   display: inline;
 }
 
+section {
+  scroll-margin-block-start: 1rem;
+}
 @media (min-width: 56.25rem) {
   section {
     scroll-margin-block-start: 8rem;
@@ -618,6 +621,7 @@ img {
   font-size: 0.8rem;
   padding-block: 1rem;
   padding-inline: 1rem;
+  line-height: 1.5;
 }
 @media (min-width: 56.25rem) {
   .course__container .accordion__title {

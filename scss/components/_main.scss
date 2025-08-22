@@ -1,6 +1,8 @@
 @use '../utils/' as u;
 
 section{
+    scroll-margin-block-start: 1rem;
+
     @include u.breakpoint(medium){
         scroll-margin-block-start: 8rem;
     }
@@ -430,6 +432,7 @@ section{
         font-size: 0.8rem;
         padding-block: 1rem;
         padding-inline: 1rem;
+        line-height: 1.5;
 
         @include u.breakpoint(medium){
             font-size: 1rem;
