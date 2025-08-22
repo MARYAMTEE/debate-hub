@@ -1,29 +1,12 @@
 const openMenu = document.querySelector(".nav__btn");
 const navBar = document.querySelector(".nav__menu");
 const navItem = document.querySelectorAll(".nav__link");
-const overlay = document.querySelector(".overlay");
 const closeMenu = document.querySelector(".close__menu");
 
 openMenu.addEventListener("click", () => {
-  if(overlay.classList.contains("hidden")){
-    overlay.classList.remove("hidden");
     navBar.classList.toggle("toggle");
     openMenu.classList.toggle("active");
-  } else {
-    overlay.classList.add("hidden");
-    navBar.classList.remove("toggle");
-    openMenu.classList.remove("active");
-  } 
 });
-
-overlay.addEventListener("click", () => {
-  navBar.classList.remove("toggle");
-  overlay.classList.add("hidden");
-});
-
-closeMenu.addEventListener("click", () => {
-  overlay.classList.remove("hidden");
-})
 
 navItem.forEach(item => {
     item.addEventListener("click", () => {
@@ -31,8 +14,7 @@ navItem.forEach(item => {
         item.classList.add("active");
         
         navBar.classList.remove("toggle");
-        overlay.classList.add("hidden");
-        openMenu.classList.toggle("active");
+        openMenu.classList.remove("active");
     })
 });
 
@@ -51,7 +33,6 @@ toggleBtn.forEach(btn =>{
 
 // Read more link
   const links = document.querySelectorAll(".grid__paragraph-link");
-  const allImages = document.querySelectorAll(".grid__img");
 
   links.forEach(link => {
     link.addEventListener("click", (e) => {

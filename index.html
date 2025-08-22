@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="parliamentary__header">
+    <header class="parliamentary__header" id="parliamentary__header">
         <div class="parliamentary__logo flex">
             <a href="index.html"><img src="./images/logo.png" class="logo__img" alt="Logo Image" /></a>
 
@@ -40,8 +40,6 @@
         </nav>
     </header>
     
-    <div class="overlay hidden"></div>
-
     <main class="parliamentary__main">
         <section class="parliamentary__banner" id="parliamentary__banner">
             <div class="banner__text">
@@ -52,13 +50,13 @@
                     <button type="button" class="contact__btn btn">Contact Us</button>
                 </div>
             </div>
-
-             <div class="banner__scroll-down">
-                <button type="button" aria-label="Down arrow" class="banner__arrow btn">
-                    <i class="fa-solid fa-down-long" aria-hidden="true"></i>
-                </button>
-            </div>
         </section>
+
+        <div class="banner__scroll-down">
+            <a href="#parliamentary__header" class="banner__arrow" aria-label="Down arrow">
+                <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+            </a>
+        </div>
 
         <div class="parliamentary__about_container">
             <section class="about__section" id="about__section">
@@ -334,11 +332,11 @@
             </div>
 
             <ul class="footer__nav flex">
-                <li class="footer__nav-item"><a href="#" class="footer__nav-link">About</a></li>
-                <li class="footer__nav-item"><a href="#" class="footer__nav-link">Careers</a></li>
-                <li class="footer__nav-item"><a href="#" class="footer__nav-link">Events</a></li>
-                <li class="footer__nav-item"><a href="#" class="footer__nav-link">Courses</a></li>
-                <li class="footer__nav-item"><a href="#" class="footer__nav-link">Support</a></li>
+                <li class="footer__nav-item"><a href="#parliamentary__banner" class="footer__nav-link">Home</a></li>
+                <li class="footer__nav-item"><a href="#about__section" class="footer__nav-link">About</a></li>
+                <li class="footer__nav-item"><a href="#parliamentary__course" class="footer__nav-link">Courses</a></li>
+                <li class="footer__nav-item"><a href="#parliamentary__testimonials" class="footer__nav-link">Testimonials</a></li>
+                <li class="footer__nav-item"><a href="#parliamentary__footer" class="footer__nav-link">Contact</a></li>
             </ul>
         </div>
 

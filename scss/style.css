@@ -78,8 +78,7 @@ img {
 
 .parliamentary__header {
   box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.3);
-  position: sticky;
-  top: 0;
+  position: relative;
   background-color: white;
   padding: 0.5rem 1rem;
   width: 100%;
@@ -90,6 +89,8 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
   }
 }
 @media (min-width: 75rem) {
@@ -291,30 +292,29 @@ img {
   transform: translateY(-0.5rem);
 }
 
-.banner__scroll-down {
-  position: absolute;
-  bottom: 2rem;
-  right: 1.5rem;
+.parliamentary__main {
+  position: relative;
 }
-@media (min-width: 56.25rem) {
-  .banner__scroll-down {
-    bottom: 7rem;
-    right: 5rem;
-  }
+
+.banner__scroll-down {
+  position: fixed;
+  z-index: 5;
+  bottom: 2rem;
+  right: 1rem;
 }
 .banner__scroll-down .banner__arrow {
-  color: var(--white);
-  font-size: 2.5rem;
-  z-index: 1000;
-  animation: grow-and-shrink_ 4s infinite ease-in-out alternate;
+  display: inline-block;
+  color: var(--orange);
+  font-size: 2rem;
+  animation: grow-and-shrink 4s infinite ease-in-out alternate;
 }
 @media (min-width: 56.25rem) {
   .banner__scroll-down .banner__arrow {
-    font-size: 2rem;
+    display: none;
   }
 }
 
-@keyframes grow-and-shrink_ {
+@keyframes grow-and-shrink {
   0% {
     transform: scale(1);
   }
@@ -417,6 +417,7 @@ img {
   height: 100%;
   overflow: hidden;
   aspect-ratio: 7/6;
+  position: relative;
 }
 @media (min-width: 56.25rem) {
   .grid__image {
@@ -428,6 +429,16 @@ img {
     aspect-ratio: 2/1;
   }
 }
+.grid__image::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+.grid__image:hover::after {
+  background-color: rgba(5, 0, 0, 0.593);
+}
 .grid__image .grid__img {
   width: 100%;
   height: 100%;
@@ -435,7 +446,6 @@ img {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  transition: height 0.3s ease;
 }
 
 .about__title {
@@ -620,12 +630,7 @@ img {
   border-radius: 50%;
   width: 1.7rem;
   height: 1.7rem;
-}
-@media (min-width: 75rem) {
-  .course__container .course__btn {
-    width: 1.7rem;
-    height: 1.7rem;
-  }
+  cursor: pointer;
 }
 .course__container .course__btn .course__arrow {
   color: var(--white);
@@ -776,7 +781,7 @@ img {
 .testimonials__btn {
   position: absolute;
   background: none;
-  margin: 0.8rem 1rem;
+  margin: 1rem;
   cursor: pointer;
 }
 @media (min-width: 56.25rem) {
@@ -806,7 +811,7 @@ img {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-block: 1.2rem;
+  margin-block: 1.6rem;
 }
 @media (min-width: 56.25rem) {
   .indicators {

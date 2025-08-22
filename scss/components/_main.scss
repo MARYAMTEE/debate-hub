@@ -1,8 +1,6 @@
 @use '../utils/' as u;
 
 section{
-    // scroll-margin-block-start: 3.5rem;
-
     @include u.breakpoint(medium){
         scroll-margin-block-start: 8rem;
     }
@@ -94,29 +92,29 @@ section{
 }
 
 // Scroll down arrow
-.banner__scroll-down{
-    position: absolute;
-    bottom: 2rem;
-    right: 1.5rem;
+.parliamentary__main{
+    position: relative;
+}
 
-    @include u.breakpoint(medium){
-        bottom: 7rem;
-        right: 5rem;   
-    }
+.banner__scroll-down{
+    position: fixed;
+    z-index: 5;
+    bottom: 2rem;
+    right: 1rem;
 
     .banner__arrow{
-        color: var(--white);
-        font-size: 2.5rem;
-        z-index: 1000;
-        animation: grow-and-shrink_ 4s infinite ease-in-out alternate;
+        display: inline-block;
+        color: var(--orange);
+        font-size: 2rem;
+        animation: grow-and-shrink 4s infinite ease-in-out alternate;
 
         @include u.breakpoint(medium){
-            font-size: 2rem;
+            display: none;
         }
     }
 }
 
-@keyframes grow-and-shrink_{
+@keyframes grow-and-shrink{
     0% {
         transform: scale(1);
     }
@@ -229,6 +227,7 @@ section{
     height: 100%;
     overflow: hidden;
     aspect-ratio: 7 / 6;
+    position: relative;
     
     @include u.breakpoint(medium){
         aspect-ratio: 7 / 5;
@@ -238,12 +237,23 @@ section{
         aspect-ratio: 2 / 1;
     }
 
+    &::after{
+        position: absolute;
+        content: "";
+        inset: 0;
+        background-color: transparent;
+        transition: background-color 0.3s ease;
+    }
+
+    &:hover::after{
+        background-color: rgba(5, 0, 0, 0.593);
+    }
+
     .grid__img{
         width: 100%;
         height: 100%;
         object-fit: cover;
         object-position: center;
-        transition: height 0.3s ease;
     }
 }
 
@@ -432,11 +442,7 @@ section{
         border-radius: 50%;
         width: 1.7rem;
         height: 1.7rem;
-
-        @include u.breakpoint(large){
-            width: 1.7rem;
-            height: 1.7rem;
-        }
+        cursor: pointer;
 
         .course__arrow{
             color: var(--white);
@@ -594,7 +600,7 @@ section{
 .testimonials__btn{
     position: absolute;
     background: none;
-    margin: 0.8rem 1rem;
+    margin: 1rem;
     cursor: pointer;
 
     @include u.breakpoint(medium){
@@ -624,7 +630,7 @@ section{
     display: flex;
     justify-content: center;
     gap: 1rem;
-    margin-block: 1.2rem;
+    margin-block: 1.6rem;
 
     @include u.breakpoint(medium){
         margin-block: 2.7rem;
