@@ -87,7 +87,6 @@ img {
   width: 100%;
   z-index: 15;
 }
-
 @media (min-width: 56.25rem) {
   .parliamentary__header {
     display: flex;
@@ -102,6 +101,7 @@ img {
     padding: 0.5rem 5rem;
   }
 }
+
 .nav__menu {
   position: relative;
   top: 0;
@@ -112,11 +112,9 @@ img {
   overflow: hidden;
   z-index: 1000;
 }
-
 .nav__menu.toggle {
   height: 22rem;
 }
-
 @media (min-width: 56.25rem) {
   .nav__menu {
     transition: none;
@@ -126,11 +124,11 @@ img {
     height: auto;
   }
 }
+
 .nav__list {
   list-style-type: none;
   display: block;
 }
-
 @media (min-width: 56.25rem) {
   .nav__list {
     display: flex;
@@ -143,15 +141,16 @@ img {
     gap: 2rem;
   }
 }
+
 .nav__item:not(:last-child) {
   border-bottom: 0.0625rem solid #b4b3b3;
 }
-
 @media (min-width: 56.25rem) {
   .nav__item:not(:last-child) {
     border-bottom: none;
   }
 }
+
 .nav__link {
   display: block;
   text-decoration: none;
@@ -159,7 +158,6 @@ img {
   width: 100%;
   padding-block: 1rem;
 }
-
 @media (min-width: 56.25rem) {
   .nav__link {
     padding: 0.5rem;
@@ -171,6 +169,7 @@ img {
     width: auto;
   }
 }
+
 .parliamentary__logo {
   justify-content: space-between;
 }
@@ -178,23 +177,21 @@ img {
 .logo__img {
   width: 3rem;
 }
-
 @media (min-width: 56.25rem) {
   .logo__img {
     width: 5rem;
   }
 }
+
 .nav__btn {
   display: block;
   cursor: pointer;
 }
-
 .nav__btn .open__menu,
 .nav__btn .close__menu {
   font-size: 2rem;
   color: var(--blue);
 }
-
 @media (min-width: 56.25rem) {
   .nav__btn {
     display: none;
@@ -215,12 +212,12 @@ img {
 section {
   scroll-margin-block-start: 1rem;
 }
-
 @media (min-width: 56.25rem) {
   section {
     scroll-margin-block-start: 8rem;
   }
 }
+
 .parliamentary__banner {
   background-image: url(../images/background__mobile.jpg);
   background-repeat: no-repeat;
@@ -231,7 +228,6 @@ section {
   position: relative;
   z-index: 10;
 }
-
 .parliamentary__banner::after {
   content: "";
   position: absolute;
@@ -239,7 +235,6 @@ section {
   background: rgba(5, 0, 0, 0.593);
   z-index: -1;
 }
-
 @media (min-width: 56.25rem) {
   .parliamentary__banner {
     background-image: url(../images/background__desktop.jpg);
@@ -251,6 +246,7 @@ section {
     height: 100vh;
   }
 }
+
 .banner__text {
   position: absolute;
   top: 50%;
@@ -265,17 +261,14 @@ section {
   margin: 0 auto;
   animation: fade-text 2s;
 }
-
 .banner__text .banner__heading {
   font-family: "Raleway", sans-serif;
   line-height: 1.5;
   font-size: 2rem;
 }
-
 .banner__text .banner__paragraph {
   margin-block: 1rem;
 }
-
 @media (min-width: 56.25rem) {
   .banner__text {
     max-width: 36.25rem;
@@ -297,6 +290,7 @@ section {
     transform: translate(-20%, -60%);
   }
 }
+
 @keyframes fade-text {
   0% {
     opacity: 0;
@@ -326,7 +320,6 @@ section {
   color: var(--white);
   margin-block-start: 0.5rem;
 }
-
 .contact__btn:hover {
   transform: translateY(-0.5rem);
 }
@@ -340,20 +333,23 @@ section {
   z-index: 5;
   bottom: 2rem;
   right: 1rem;
+  background-color: var(--blue);
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
 }
-
 .banner__scroll-down .banner__arrow {
   display: inline-block;
-  color: var(--orange);
-  font-size: 2rem;
+  color: var(--white);
+  font-size: 1.5rem;
   animation: grow-and-shrink 4s infinite ease-in-out alternate;
 }
-
 @media (min-width: 56.25rem) {
   .banner__scroll-down .banner__arrow {
     display: none;
   }
 }
+
 @keyframes grow-and-shrink {
   0% {
     transform: scale(1);
@@ -368,30 +364,28 @@ section {
 .parliamentary__about_container {
   padding-inline: 2rem;
 }
-
 @media (min-width: 75rem) {
   .parliamentary__about_container {
     padding-inline: 3rem;
   }
 }
+
 .about__section {
   margin-block: 2rem;
 }
-
 @media (min-width: 56.25rem) {
   .about__section {
     margin-block: 3rem;
   }
 }
+
 .about__grid {
   display: grid;
   grid-template-columns: 1fr;
 }
-
 .about__grid .item__4 {
   background-color: var(--light-blue);
 }
-
 @media (min-width: 56.25rem) {
   .about__grid {
     grid-template-columns: 1fr 1fr;
@@ -432,13 +426,13 @@ section {
     grid-column: span 2;
   }
 }
+
 .grid__item {
   background-color: var(--blue);
   color: var(--white);
   padding: 2rem 1.5rem;
   position: relative;
 }
-
 @media (min-width: 56.25rem) {
   .grid__item {
     padding: 3rem 2rem;
@@ -447,7 +441,6 @@ section {
 .grid__item .grid__title {
   font-weight: 600;
 }
-
 .grid__item .grid__paragraph {
   font-size: 1rem;
   font-weight: 400;
@@ -462,7 +455,6 @@ section {
   aspect-ratio: 7/6;
   position: relative;
 }
-
 @media (min-width: 56.25rem) {
   .grid__image {
     aspect-ratio: 7/5;
@@ -480,17 +472,13 @@ section {
   background-color: transparent;
   transition: background-color 0.3s ease;
 }
-
 .grid__image:hover::after {
   background-color: rgba(5, 0, 0, 0.593);
 }
-
 .grid__image .grid__img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
   object-fit: cover;
-  -o-object-position: center;
   object-position: center;
 }
 
@@ -503,7 +491,6 @@ section {
   gap: 2rem;
   margin-block: 3rem;
 }
-
 @media (min-width: 56.25rem) {
   .parliamentary__core-value {
     flex-direction: row;
@@ -519,7 +506,6 @@ section {
   width: 13rem;
   border-radius: 0.5rem;
 }
-
 @media (min-width: 56.25rem) {
   .parliamentary__core-value .core__img {
     width: 12rem;
@@ -535,13 +521,10 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   row-gap: 0.3rem;
-  -moz-column-gap: 2rem;
   column-gap: 2rem;
 }
-
 @media (min-width: 75rem) {
   .parliamentary__core-value .core__grid {
-    -moz-column-gap: 4rem;
     column-gap: 4rem;
   }
 }
@@ -550,7 +533,6 @@ section {
   align-items: center;
   gap: 0.5rem;
 }
-
 @media (min-width: 56.25rem) {
   .parliamentary__core-value .core__item {
     gap: 1rem;
@@ -564,7 +546,6 @@ section {
   display: grid;
   place-items: center;
 }
-
 @media (min-width: 56.25rem) {
   .parliamentary__core-value .core__item .core__icon-container {
     width: 2.2rem;
@@ -581,7 +562,6 @@ section {
   color: var(--white);
   font-size: 1rem;
 }
-
 @media (min-width: 75rem) {
   .parliamentary__core-value .core__item .core__icon-container .core__icon {
     font-size: 1.2rem;
@@ -603,7 +583,6 @@ section {
   text-align: center;
   margin-block-end: 1rem;
 }
-
 @media (min-width: 56.25rem) {
   .core__header {
     margin-block-end: 1.5rem;
@@ -622,29 +601,28 @@ section {
 .parliamentary__course {
   margin-block: 3rem;
 }
-
 @media (min-width: 56.25rem) {
   .parliamentary__course {
     margin-block: 5rem;
   }
 }
+
 .container__course {
   margin-block-start: 2rem;
   gap: 1rem;
 }
-
 @media (min-width: 56.25rem) {
   .container__course {
     gap: 1.5rem;
   }
 }
+
 .course__container .accordion__title {
   font-size: 0.8rem;
   padding-block: 1rem;
   padding-inline: 1rem;
   line-height: 1.5;
 }
-
 @media (min-width: 56.25rem) {
   .course__container .accordion__title {
     font-size: 1rem;
@@ -655,7 +633,6 @@ section {
   background-color: var(--accordion-color);
   width: 100%;
 }
-
 @media (min-width: 56.25rem) {
   .course__container .course__accordion {
     display: flex;
@@ -670,7 +647,6 @@ section {
   color: var(--white);
   justify-content: flex-start;
 }
-
 @media (min-width: 56.25rem) {
   .course__container .course__syllabus {
     padding-inline: 0.5rem;
@@ -689,12 +665,10 @@ section {
   height: 1.7rem;
   cursor: pointer;
 }
-
 .course__container .course__btn .course__arrow {
   color: var(--white);
   font-size: 1rem;
 }
-
 @media (min-width: 75rem) {
   .course__container .course__btn .course__arrow {
     font-size: 0.8rem;
@@ -703,7 +677,6 @@ section {
 .course__container .course__btn .course__arrow.rotated {
   transform: rotate(180deg);
 }
-
 .course__container .course__toggle.toggle {
   max-height: 15.625rem;
 }
@@ -713,7 +686,6 @@ section {
   gap: 2rem;
   background-color: var(--career-bg);
 }
-
 @media (min-width: 56.25rem) {
   .course__career {
     flex-direction: row;
@@ -728,7 +700,6 @@ section {
 .course__career .career__image {
   flex: 1;
 }
-
 .course__career .career__text {
   flex: 1;
   padding-block: 1rem;
@@ -745,7 +716,6 @@ section {
 .parliamentary__testimonials {
   margin-block: 3rem;
 }
-
 @media (min-width: 56.25rem) {
   .parliamentary__testimonials {
     margin-block: 5rem;
@@ -755,32 +725,29 @@ section {
   line-height: 1.6;
   margin-block-end: 2rem;
 }
-
 .parliamentary__testimonials .testimonials__title .testimonials__subtitle {
   font-size: 1rem;
   font-weight: 500;
   color: var(--light-blue);
   text-align: center;
 }
-
 @media (min-width: 56.25rem) {
   .parliamentary__testimonials .testimonials__title .testimonials__subtitle {
     font-size: 1.5rem;
     font-weight: 600;
   }
 }
+
 .testimonials__carousel {
   position: relative;
   width: 100%;
   overflow: hidden;
   margin: auto;
 }
-
 .testimonials__carousel .testimonials__slides {
   display: flex;
   transition: transform 0.5s ease;
 }
-
 @media (min-width: 56.25rem) {
   .testimonials__carousel .testimonials__slides {
     gap: 2rem;
@@ -790,7 +757,6 @@ section {
   flex: 0 0 100%;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.13);
 }
-
 @media (min-width: 56.25rem) {
   .testimonials__carousel .testimonials__slider {
     display: flex;
@@ -800,27 +766,25 @@ section {
     flex: 0 0 50%;
   }
 }
+
 .testimonials__image {
   position: relative;
   padding-block-end: 60%;
 }
-
 @media (min-width: 56.25rem) {
   .testimonials__image {
     position: static;
     padding-block-end: 0%;
   }
 }
+
 .testimonials__imgs {
   position: absolute;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
   object-fit: cover;
-  -o-object-position: center;
   object-position: center;
 }
-
 @media (min-width: 56.25rem) {
   .testimonials__imgs {
     position: static;
@@ -828,10 +792,10 @@ section {
     height: 17rem;
   }
 }
+
 .testimonial__texts {
   padding: 2rem 1rem;
 }
-
 @media (min-width: 56.25rem) {
   .testimonial__texts {
     padding: 1rem;
@@ -840,12 +804,10 @@ section {
 .testimonial__texts .testimonials__date {
   color: var(--testimonial-color);
 }
-
 .testimonial__texts .testimonials__slide-title {
   line-height: 1.4;
   margin-block: 0.5rem;
 }
-
 .testimonial__texts .testimonials__paragraph {
   color: var(--testimonial-color);
   font-size: 0.875rem;
@@ -857,7 +819,6 @@ section {
   margin: 1rem;
   cursor: pointer;
 }
-
 @media (min-width: 56.25rem) {
   .testimonials__btn {
     margin-block: 2rem;
@@ -867,12 +828,12 @@ section {
   font-size: 2rem;
   color: var(--deep-orange);
 }
-
 @media (min-width: 56.25rem) {
   .testimonials__btn .slide__arrow {
     font-size: 2.5rem;
   }
 }
+
 .testimonials__btn--prev {
   left: 1rem;
 }
@@ -887,12 +848,12 @@ section {
   gap: 1rem;
   margin-block: 1.6rem;
 }
-
 @media (min-width: 56.25rem) {
   .indicators {
     margin-block: 2.7rem;
   }
 }
+
 .indicators button {
   width: 0.625rem;
   height: 0.625rem;
@@ -918,16 +879,15 @@ section {
   background-color: var(--blue);
   padding: 3rem 1rem;
 }
-
 @media (min-width: 56.25rem) {
   .parliamentary__footer {
     padding: 4rem 2rem;
   }
 }
+
 .footer__socials {
   gap: 1rem;
 }
-
 .footer__socials .footer__icon {
   background-color: var(--white);
   font-size: 1.5rem;
@@ -941,7 +901,6 @@ section {
   transition: transform 0.2s ease-in-out, opacity 0.2s ease;
   will-change: transform;
 }
-
 .footer__socials .footer__icon:hover {
   transform: translateY(-0.2rem);
   opacity: 0.8;
@@ -951,18 +910,17 @@ section {
   flex-direction: column-reverse;
   gap: 2rem;
 }
-
 @media (min-width: 56.25rem) {
   .footer__container {
     flex-direction: column;
   }
 }
+
 .footer__nav {
   list-style-type: none;
   flex-direction: column;
   gap: 1.5rem;
 }
-
 @media (min-width: 56.25rem) {
   .footer__nav {
     flex-direction: row;
@@ -988,13 +946,13 @@ section {
   margin: 1.5rem 0;
   border: none;
 }
-
 @media (min-width: 56.25rem) {
   .footer__divider {
     width: 80%;
     margin: 2rem auto;
   }
 }
+
 .facebook {
   color: var(--facebook);
 }
@@ -1009,6 +967,6 @@ section {
 
 .p-interest {
   color: var(--pin-interest);
-} 
+}
 
 /*# sourceMappingURL=style.css.map */
