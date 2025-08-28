@@ -182,7 +182,8 @@ section{
 .about__grid{
     display: grid;   
     grid-template-columns: 1fr;
-
+    width: 100%;
+    place-items: center;
 
     .item__4{
         background-color: var(--light-blue);
@@ -190,6 +191,8 @@ section{
 
     @include u.breakpoint(medium){
         grid-template-columns: 1fr 1fr;
+        max-width: 100%;
+        place-items: normal;
         
         .grid__img--1{
             border-top-left-radius: 1rem;
@@ -240,9 +243,12 @@ section{
     color: var(--white);
     padding: 2rem 1.5rem;
     position: relative;
+    width: 100%;
+    max-width: 31.25rem;
 
     @include u.breakpoint(medium){
         padding: 3rem 2rem;
+        max-width: 100%;
     }
 
     .grid__title{
@@ -259,16 +265,19 @@ section{
 
 .grid__image{
     width: 100%;
+    max-width: 31.25rem;
     height: 100%;
     overflow: hidden;
     aspect-ratio: 7 / 6;
     position: relative;
     
     @include u.breakpoint(medium){
+        max-width: 100%;
         aspect-ratio: 7 / 5;
     }
 
     @include u.breakpoint(large){
+        max-width: 100%;
         aspect-ratio: 2 / 1;
     }
 
@@ -426,11 +435,18 @@ section{
     gap: 1rem;
 
     @include u.breakpoint(medium){
+        max-width: 100%;
         gap: 1.5rem;
     }
 }
 
 .course__container{
+    width: 100%;
+    max-width: 31.25rem;
+
+    @include u.breakpoint(medium){
+        max-width: 100%;
+    }
 
     .accordion__title{
         font-size: 0.8rem;
@@ -517,11 +533,22 @@ section{
 
     .career__image{
         flex: 1;
+
+        .career__img{
+            width: 100%;
+            max-width: 31.25rem;
+        }
     }
 
     .career__text{
+        width: 100%;
+        max-width: 31.25rem;
         flex: 1;
         padding-block: 1rem;
+
+        @include u.breakpoint(medium){
+            max-width: 100%;
+        }
     }
 }
 
@@ -563,8 +590,13 @@ section{
 .testimonials__carousel{
     position: relative;
     width: 100%;
+    max-width: 25rem;
     overflow: hidden;
     margin: auto;
+
+    @include u.breakpoint('medium'){
+        max-width: 100%;
+    }
 
     .testimonials__slides{
         display: flex;
@@ -576,8 +608,12 @@ section{
     }
 
     .testimonials__slider{
+        width: 100%;
+        max-width: 25rem;
+        overflow: hidden;
         flex: 0 0 100%;
         box-shadow: 0 1px 5px rgba(0, 0, 0, 0.13);
+
 
         @include u.breakpoint(medium){
             display: flex;
@@ -592,7 +628,9 @@ section{
 .testimonials__image{
     position: relative;
     padding-block-end: 60%;
-
+    width: 100%;
+    overflow: hidden;
+    
     @include u.breakpoint(medium){
         position: static;
         padding-block-end: 0%;
@@ -601,19 +639,20 @@ section{
 
 .testimonials__imgs{
     position: absolute;
-    width: 100%;
     height: 100%;
+    max-height: 15rem;
     object-fit: cover;
     object-position: center;
 
     @include u.breakpoint(medium){
         position: static;
         width: 35rem;
-        height: 17rem;
+        height: 15rem;
     }
 }
 
 .testimonial__texts{
+    max-width: 25rem;
     padding: 2rem 1rem;
 
     @include u.breakpoint(medium){
